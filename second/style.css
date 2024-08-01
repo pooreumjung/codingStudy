@@ -1,0 +1,59 @@
+body {
+    margin: 0; /*마진의 기본값은 8px*/
+    background-image: url(다운로드.jpeg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.container {
+    background-color: white;
+    min-height: 100vh;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px, rgb(51, 51, 51) 0px 0px 0px 3px;
+}
+
+.task-area {
+    border: 1px solid lightgray;
+}
+.task-tabs {
+    display: flex;
+    border-bottom: 1px solid lightgray;
+    position: relative;
+}
+.task-tabs div {
+    padding: 1em;
+    cursor: pointer;
+}
+
+#under-line {
+    height: 4px;
+    background-color: pink;
+    position: absolute;
+    width: 80px;
+    left: 0px;
+    top: 52px;
+    padding: 0;
+}
+
+.task {
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid lightgray;
+}
+.task-check {
+    background: lightgray;
+    display: flex;
+    justify-content: space-between;
+}
+
+.task-done {
+    text-decoration: line-through;
+}
+
+.true-button-area {
+    background: white;
+}
+#check-button,
+#delete-button {
+    background: none;
+    border: none;
+}
