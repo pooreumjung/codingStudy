@@ -10,15 +10,42 @@
             integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
             crossorigin="anonymous"
         />
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.18.0/moment.min.js"></script>
+        <script src="https://kit.fontawesome.com/dab690a483.js" crossorigin="anonymous"></script>
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" rel="stylesheet" />
         <link rel="stylesheet" href="style.css" />
     </head>
     <body>
+        <div class="side-menu" id="mySidenav">
+            <button class="closebtn" onclick="closeNav()">&times;</button>
+            <div class="side-menu-list" id="menu-list">
+                <button id="Sport">Sport</button>
+                <button id="Tech">Tech</button>
+                <button id="World">World</button>
+                <button id="Politics">Politics</button>
+                <button id="Business">Business</button>
+                <button id="Economics">Economics</button>
+                <button id="Entertainment">Entertainment</button>
+                <button id="Beauty">Beauty</button>
+                <button id="Travel">Travel</button>
+                <button id="Music">Music</button>
+                <button id="Food">Food</button>
+                <button id="Science">Science</button>
+                <button id="Gaming">Gaming</button>
+                <button id="Energy">Energy</button>
+            </div>
+        </div>
+        <!-- 생략 -->
+        <!-- 햄버거 버튼 추가  -->
+        <i class="fas fa-bars hide icon-button" id="side-button" onclick="openNav()"></i>
         <section class="container">
             <section>
-                <div class="search-area">
-                    <div class="search">search</div>
-                    <input type="text" class="search-input" />
-                </div>
+                <i class="fas fa-search icon-button" id="search-button" onclick="openSearchBox()"></i>
+                <span id="input-area">
+                    <input type="text" id="search-input" placeholder="search" />
+                    <button class="search-btn">Go</button>
+                </span>
+
                 <div class="head-line">
                     <svg viewBox="0 0 184 25" fill="#000">
                         <path
@@ -26,44 +53,24 @@
                         ></path>
                     </svg>
                 </div>
-                <div class="hambgurger-menus">
-                    <button class="hamburger-button">+</button>
-                    <div class="side-menu">
-                        <button>Sport</button>
-                        <button>Tech</button>
-                        <button>World</button>
-                        <button>Finance</button>
-                        <button>Politics</button>
-                        <button>Business</button>
-                        <button>Economics</button>
-                        <button>Entertainment</button>
-                        <button>Beauty</button>
-                        <button>Travel</button>
-                        <button>Music</button>
-                        <button>Food</button>
-                        <button>Science</button>
-                        <button>Gaming</button>
-                        <button>Energy</button>
-                    </div>
-                </div>
                 <div class="menus" id="menu-list">
-                    <button>Sport</button>
-                    <button>Tech</button>
-                    <button>World</button>
-                    <button>Finance</button>
-                    <button>Politics</button>
-                    <button>Business</button>
-                    <button>Economics</button>
-                    <button>Entertainment</button>
-                    <button>Beauty</button>
-                    <button>Travel</button>
-                    <button>Music</button>
-                    <button>Food</button>
-                    <button>Science</button>
-                    <button>Gaming</button>
-                    <button>Energy</button>
+                    <button id="Sport">Sport</button>
+                    <button id="Tech">Tech</button>
+                    <button id="World">World</button>
+                    <button id="Politics">Politics</button>
+                    <button id="Business">Business</button>
+                    <button id="Economics">Economics</button>
+                    <button id="Entertainment">Entertainment</button>
+                    <button id="Beauty">Beauty</button>
+                    <button id="Travel">Travel</button>
+                    <button id="Music">Music</button>
+                    <button id="Food">Food</button>
+                    <button id="Science">Science</button>
+                    <button id="Gaming">Gaming</button>
+                    <button id="Energy">Energy</button>
                 </div>
             </section>
+            <section id="error-area"></section>
             <section id="news-area"></section>
         </section>
 
